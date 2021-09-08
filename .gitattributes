@@ -1,2 +1,1 @@
-*.java linguist-language=JavaScript
-
+*.sql linguist-detectable=TSQL
