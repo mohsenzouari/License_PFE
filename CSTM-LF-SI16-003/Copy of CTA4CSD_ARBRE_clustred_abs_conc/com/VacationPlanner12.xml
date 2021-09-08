@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="VacationPlanner">
+				<description>
+					
+				</description>
+				<feature abstract="true" mandatory="true" name="CurrencyConverter"/>
+				<alt abstract="true" mandatory="true" name="Flight">
+					<feature mandatory="true" name="BookRoundFlight"/>
+					<and mandatory="true" name="BookWayFlight">
+						<feature mandatory="true" name="BWFlightInput"/>
+						<feature mandatory="true" name="BWFlightOutput"/>
+					</and>
+				</alt>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="true">
+			<feature name="CurrencyConverter"/>
+			<feature name="Flight"/>
+		</featureOrder>
+	</featureModel>

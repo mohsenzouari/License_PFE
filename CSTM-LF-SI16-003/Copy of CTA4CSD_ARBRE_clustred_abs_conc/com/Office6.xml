@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="Virtual Office">
+				<description>
+					
+				</description>
+				<feature mandatory="true" name="Smart Business Trip"/>
+				<and mandatory="true" name="Virtual Printer">
+					<and mandatory="true" name="Follow Me">
+						<feature mandatory="true" name="Environment Virtualisation"/>
+						<feature mandatory="true" name="Auto log on"/>
+						<alt mandatory="true" name="User Positioning Method">
+							<feature mandatory="true" name="Acces Point Based"/>
+						</alt>
+					</and>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

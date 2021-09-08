@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="System">
+				<description>
+					 
+				</description>
+				<and mandatory="true" name="Reservation">
+					<feature mandatory="true" name="Hotel"/>
+					<feature mandatory="true" name="Flight"/>
+				</and>
+				<feature name="Transport"/>
+				<alt mandatory="true" name="Payment">
+					<description>
+						 
+					</description>
+					<feature mandatory="true" name="Bank Transfer"/>
+					<feature mandatory="true" name="Credit Card"/>
+				</alt>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

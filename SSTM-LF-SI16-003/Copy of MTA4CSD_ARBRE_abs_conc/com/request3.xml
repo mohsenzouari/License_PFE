@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="VacationPianner">
+				<description>
+					
+				</description>
+				<feature abstract="true" name="CurrencyConverter"/>
+				<or abstract="true" mandatory="true" name="Flight">
+					<feature mandatory="true" name="BookRoundFlight"/>
+					<and mandatory="true" name="BookWayFlight">
+						<and mandatory="true" name="BWFlightInput">
+							<alt mandatory="true" name="Destination">
+								<feature mandatory="true" name="String"/>
+								<feature mandatory="true" name="Adress"/>
+								<feature mandatory="true" name="CountryCode"/>
+							</alt>
+							<and mandatory="true" name="DeparDate">
+								<feature mandatory="true" name="DateTime"/>
+							</and>
+							<or name="FlightType">
+								<feature mandatory="true" name="Economic"/>
+								<feature mandatory="true" name="Business"/>
+							</or>
+						</and>
+						<and mandatory="true" name="BWFlightOutput">
+							<and mandatory="true" name="FlightNum">
+								<feature mandatory="true" name="Int"/>
+							</and>
+						</and>
+						<and name="BWFlightFault">
+							<and mandatory="true" name="FaultOut">
+								<feature mandatory="true" name="Strings"/>
+								<feature name="FlightException"/>
+							</and>
+						</and>
+					</and>
+					<feature mandatory="true" name="SendConfirmation"/>
+				</or>
+				<feature abstract="true" name="Hotel"/>
+				<feature name="Guide"/>
+				<alt mandatory="true" name="Payment">
+					<feature mandatory="true" name="BankTransfer"/>
+					<feature mandatory="true" name="CreditCard"/>
+				</alt>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="true">
+			<feature name="CurrencyConverter"/>
+			<feature name="Flight"/>
+			<feature name="Hotel"/>
+		</featureOrder>
+	</featureModel>

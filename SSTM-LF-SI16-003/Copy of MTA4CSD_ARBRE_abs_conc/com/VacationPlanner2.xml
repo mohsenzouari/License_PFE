@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="VacationPlanner">
+				<description>
+					
+				</description>
+				<feature abstract="true" name="CurrencyConverter"/>
+				<and abstract="true" mandatory="true" name="Flight">
+					<alt mandatory="true" name="Destination">
+						<feature mandatory="true" name="String"/>
+						<feature mandatory="true" name="Adress"/>
+					</alt>
+					<feature name="SendConfirmation"/>
+				</and>
+				<alt mandatory="true" name="Payment">
+					<feature mandatory="true" name="BankTransfer"/>
+					<feature mandatory="true" name="Credit Card"/>
+				</alt>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="true">
+			<feature name="CurrencyConverter"/>
+			<feature name="Flight"/>
+		</featureOrder>
+	</featureModel>

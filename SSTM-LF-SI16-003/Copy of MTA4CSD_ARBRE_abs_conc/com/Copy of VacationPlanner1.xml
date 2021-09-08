@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="VacationPlanner">
+				<description>
+					
+				</description>
+				<or abstract="true" mandatory="true" name="Flight">
+					<feature mandatory="true" name="BookRoundFlight"/>
+					<feature mandatory="true" name="SendConfirmation"/>
+				</or>
+				<feature abstract="true" name="Hotel"/>
+				<feature mandatory="true" name="Transport"/>
+				<and mandatory="true" name="Payment">
+					<feature mandatory="true" name="Credit Card"/>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="true">
+			<feature name="Flight"/>
+			<feature name="Hotel"/>
+		</featureOrder>
+	</featureModel>
